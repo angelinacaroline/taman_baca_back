@@ -10,9 +10,9 @@ import (
 	"time"
 )
 
-//Class untuk Tabel Kelompok
+// Class untuk Tabel Kelompok
 type Kelompok struct {
-	Id_Kelompok          string `json:"id_kelompok"`
+	Id_kelompok          string `json:"id_kelompok"`
 	Nama_kelompok        string `json:"nama_kelompok"`
 	Id_kategori_kelompok string `json:"id_kategori_kelompok"`
 	Penanggungjawab      string `json:"penanggungjawab"`
@@ -22,7 +22,7 @@ type Kelompok struct {
 	Nama_kategori        string `json:"nama_kategori"`
 }
 
-//Select Data Kelompok
+// Select Data Kelompok
 func DataKelompok() (Response, error) {
 	var obj Kelompok
 	var arrobj []Kelompok
@@ -43,7 +43,7 @@ func DataKelompok() (Response, error) {
 
 	for rows.Next() {
 		err = rows.Scan(
-			&obj.Id_Kelompok,
+			&obj.Id_kelompok,
 			&obj.Nama_kelompok,
 			&obj.Id_kategori_kelompok,
 			&obj.Penanggungjawab,
@@ -67,7 +67,7 @@ func DataKelompok() (Response, error) {
 	return res, nil
 }
 
-//Insert Data Kelompok
+// Insert Data Kelompok
 func SimpanDataKelompok(id_kelompok string, nama_kelompok string, id_kategori_kelompok string, penanggungjawab string, no_telepon string, alamat string,
 	tanggal_terdaftar string) (Response, error) {
 	var res Response
@@ -107,7 +107,7 @@ func SimpanDataKelompok(id_kelompok string, nama_kelompok string, id_kategori_ke
 	return res, nil
 }
 
-//Update Data Kelompok
+// Update Data Kelompok
 func UbahDataKelompok(id_kelompok string, nama_kelompok string, id_kategori_kelompok string, penanggungjawab string, no_telepon string, alamat string) (Response, error) {
 	var res Response
 
@@ -148,7 +148,7 @@ func UbahDataKelompok(id_kelompok string, nama_kelompok string, id_kategori_kelo
 	return res, nil
 }
 
-//Delete Data Kelompok
+// Delete Data Kelompok
 func HapusDataKelompok(id_kelompok string) (Response, error) {
 	var res Response
 
@@ -225,7 +225,7 @@ func HapusDataKelompok(id_kelompok string) (Response, error) {
 //	return res, nil
 //}
 
-//Class untuk Tabel Inventaris
+// Class untuk Tabel Inventaris
 type Inventaris struct {
 	Id_inventaris   string         `json:"id_inventaris"`
 	Nama_inventaris string         `json:"nama_inventaris"`
@@ -233,7 +233,7 @@ type Inventaris struct {
 	Foto_inventaris sql.NullString `json:"foto_inventaris"`
 }
 
-//Select Data Inventaris
+// Select Data Inventaris
 func DataInventaris() (Response, error) {
 	var obj Inventaris
 	var arrobj []Inventaris
