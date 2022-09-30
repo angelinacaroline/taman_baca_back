@@ -12,7 +12,7 @@ import (
 
 //Class untuk Tabel Kelompok
 type Kelompok struct {
-	Id_kelompok          string `json:"id_kelompok"`
+	Id_Kelompok          string `json:"id_kelompok"`
 	Nama_kelompok        string `json:"nama_kelompok"`
 	Id_kategori_kelompok string `json:"id_kategori_kelompok"`
 	Penanggungjawab      string `json:"penanggungjawab"`
@@ -43,7 +43,7 @@ func DataKelompok() (Response, error) {
 
 	for rows.Next() {
 		err = rows.Scan(
-			&obj.Id_kelompok,
+			&obj.Id_Kelompok,
 			&obj.Nama_kelompok,
 			&obj.Id_kategori_kelompok,
 			&obj.Penanggungjawab,
