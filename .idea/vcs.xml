@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/taman_baca_back" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tamanbaca_DB" vcs="Git" />
   </component>
 </project>
